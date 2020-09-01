@@ -10951,6 +10951,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 700;
   letter-spacing: 0.0625em;
   text-transform: uppercase;
+  font-size: 0.9rem;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -10963,6 +10964,12 @@ a.text-dark:hover, a.text-dark:focus {
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #fed136;
+}
+
+@media (min-width: 768px) {
+  #mainNav .navbar-brand {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -10978,11 +10985,6 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 1.5em;
     -webkit-transition: font-size 0.3s ease-in-out;
     transition: font-size 0.3s ease-in-out;
-  }
-  #mainNav .navbar-brand img {
-    height: 2rem;
-    -webkit-transition: height 0.3s ease-in-out;
-    transition: height 0.3s ease-in-out;
   }
   #mainNav.navbar-shrink {
     padding-top: 1rem;

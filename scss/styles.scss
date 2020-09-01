@@ -1,0 +1,17 @@
+// Import variables
+@import './config';
+
+// Import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Import components
+@import './components/buttons';
+@import './components/navbar';
+
+// Import global styles
+@import './globals';
+
+// Import sections
+@import './sections/masthead';
+@import './sections/footer';
+@import './sections/contact';

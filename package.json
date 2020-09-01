@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d dist"
   },
   "author": "Marko Stojanovic",
   "license": "ISC",
+  "homepage": "https://marko-st-bl.github.io/quad_adventures/",
   "dependencies": {
-    "bootstrap": "^4.5.2"
+    "bootstrap": "^4.5.2",
+    "gh-pages": "^3.1.0"
   }
 }

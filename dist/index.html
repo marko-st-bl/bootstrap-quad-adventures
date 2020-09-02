@@ -8,6 +8,7 @@
     <title>Quad Adventures Kneževo</title>
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="assets/favicon.png"/>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
@@ -25,12 +26,12 @@
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
-                Meni
                 <i class="fas fa-bars ml-1"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Usluge</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#pricing">Cjenovnik</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#gallery">Galerija</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">O nama</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Kontakt</a></li>
@@ -93,8 +94,66 @@
             </div>
         </div>
     </section>
+    <!-- Pricing-->
+    <section class="page-section bg-light" id="pricing">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Cjenovnik</h2>
+                <h3 class="section-subheading text-muted">Osnovnih paketa ponude</h3>
+            </div>
+            <div class="container">
+                <div class="card-deck md-3 text-center">
+                    <div class="card mb-4 box-shadow offer">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Ponuda</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">50 KM<small class="text-muted">/ osobi</small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>stavka 1</li>
+                                <li>stavka 2</li>
+                                <li>stavka 3</li>
+                                <li>stavka 4</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card md-4 box-shadow offer">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Ponuda</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">80 KM<small class="text-muted">/ osobi</small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>stavka 1</li>
+                                <li>stavka 2</li>
+                                <li>stavka 3</li>
+                                <li>stavka 4</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card md-4 box-shadow offer">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Ponuda</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">60 KM<small class="text-muted">/ osobi</small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>stavka 1</li>
+                                <li>stavka 2</li>
+                                <li>stavka 3</li>
+                                <li>stavka 4</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Gallery Grid-->
-    <section class="page-section bg-light" id="gallery">
+    <section class="page-section" id="gallery">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Galerija</h2>
@@ -165,13 +224,15 @@
         </div>
     </section>
     <!-- About-->
-    <section class="page-section" id="about">
+    <section class="page-section bg-light" id="about">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">O nama</h2>
             </div>
             <div class="about-text">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam atque et nulla vero vitae. Dolore, necessitatibus. Fugiat quo et aliquid praesentium? Iste consequatur at architecto ab qui officiis soluta. Vero.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam atque et nulla vero vitae. Dolore,
+                    necessitatibus. Fugiat quo et aliquid praesentium? Iste consequatur at architecto ab qui officiis
+                    soluta. Vero.</p>
             </div>
         </div>
     </section>
@@ -183,23 +244,24 @@
                 <h3 class="section-subheading text-muted">Ako želite da rezervišete vožnju ili imate bilo kakva pitanja.
                 </h3>
             </div>
-            <form id="contactForm" name="sentMessage" novalidate="novalidate">
+            <form id="contactForm" name="sentMessage" novalidate="novalidate" action="https://formspree.io/moqkorwv"
+                method="POST">
                 <div class="row align-items-stretch mb-5">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" id="name" type="text" placeholder="Vaše Ime *"
+                            <input class="form-control" id="name" type="text" placeholder="Vaše Ime *" name="name"
                                 required="required" data-validation-required-message="Molimo vas unesite vaše ime." />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" id="email" type="email" placeholder="Email *"
+                            <input class="form-control" id="email" type="email" placeholder="Email *" name="email"
                                 required="required"
                                 data-validation-required-message="Molimo vas unesite vašu email adresu." />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="form-group mb-md-0">
                             <input class="form-control" id="phone" type="tel" placeholder="Broj Telefona *"
-                                required="required"
+                                name="telefon" required="required"
                                 data-validation-required-message="Molimo vas unesite vas broj telefona." />
                             <p class="help-block text-danger"></p>
                         </div>
@@ -207,7 +269,7 @@
                     <div class="col-md-6">
                         <div class="form-group form-group-textarea mb-md-0">
                             <textarea class="form-control" id="message" placeholder="Poruka *" required="required"
-                                data-validation-required-message="Molimo unesite poruku."></textarea>
+                                name="message" data-validation-required-message="Molimo unesite poruku."></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -229,7 +291,8 @@
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="viber://chat?number=%2B38765337936"><i class="fab fa-viber"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="viber://chat?number=%2B38765337936"><i
+                            class="fab fa-viber"></i></a>
                 </div>
             </div>
         </div>

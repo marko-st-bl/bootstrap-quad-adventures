@@ -18,9 +18,7 @@
         font-weight: $headings-font-weight;
         letter-spacing: $headings-letter-spacing;
         text-transform: uppercase;
-        img {
-            height: 1.5rem;
-        }
+        font-size: 0.9rem;
     }
     .navbar-nav {
         .nav-item {
@@ -39,6 +37,15 @@
     }
 }
 
+// Responsive styling for screen width equal to or greater tham the medium breakpoint
+@include media-breakpoint-up(md){
+    #mainNav{
+        .navbar-brand{
+            font-size: 1.25rem;
+        }
+    }
+}
+
 // Responsive styling for screen width equal to or greater than the large breakpoint
 @include media-breakpoint-up(lg) {
     #mainNav {
@@ -51,10 +58,6 @@
         .navbar-brand {
             font-size: 1.5em;
             transition: font-size 0.3s ease-in-out;
-            img {
-                height: 2rem;
-                transition: height 0.3s ease-in-out;
-            }
         }
         // Styling for when the navbar shrinks on larger screens
         &.navbar-shrink {
@@ -62,11 +65,7 @@
             padding-bottom: 1rem;
             background-color: $gray-900;
             .navbar-brand {
-                font-size: 1.25em;
-                svg,
-                img {
-                    height: 1.5rem;
-                }
+                font-size: 1.1rem;
             }
         }
         .navbar-nav .nav-item {
